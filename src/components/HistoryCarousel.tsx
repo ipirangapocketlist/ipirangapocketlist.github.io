@@ -29,12 +29,15 @@ export default function HistoryCarousel({ paragraphs }: HistoryCarouselProps) {
   }, [emblaApi, onSelect]);
 
   return (
-    <div>
+    <div className="min-w-0 w-full">
       <div className="embla__viewport overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {paragraphs.map((p, i) => (
-            <div key={i} className="min-w-0 flex-[0_0_100%]">
-              <p className={`text-base leading-relaxed sm:text-lg sm:text-xl ${i === 0 ? 'font-medium text-swiss-black' : 'text-swiss-gray-600'}`}>
+            <div key={i} className="min-w-0 flex-[0_0_100%] pr-1">
+              <p
+                className={`text-[clamp(0.9375rem,2.8vw,1.25rem)] leading-relaxed break-words hyphens-auto ${i === 0 ? 'font-medium text-swiss-black' : 'text-swiss-gray-600'}`}
+                lang="pt-BR"
+              >
                 {p}
               </p>
             </div>

@@ -9,7 +9,7 @@ interface VizinhoCardProps {
 
 function VizinhoCard({ rec, index }: VizinhoCardProps) {
   return (
-    <article className="card-swiss flex h-full flex-col p-4 sm:p-6">
+    <article className="card-swiss flex h-full min-w-0 flex-col p-4 sm:p-6">
       <div className="mb-4 flex items-start justify-between">
         <span className="swiss-label border border-swiss-black px-2 py-1">
           {CATEGORIA_LABELS[rec.categoria]}
@@ -21,14 +21,14 @@ function VizinhoCard({ rec, index }: VizinhoCardProps) {
       <span className="mb-3 inline-block w-fit border-b-2 border-swiss-red pb-0.5 text-[10px] font-bold uppercase tracking-widest text-swiss-red">
         Vizinho
       </span>
-      <h3 className="text-xl font-bold tracking-tight">{rec.nome}</h3>
-      <p className="mt-1 text-xs font-medium uppercase tracking-wider text-swiss-gray-600">
+      <h3 className="break-words text-lg font-bold leading-tight tracking-tight sm:text-xl">{rec.nome}</h3>
+      <p className="mt-1 break-words text-xs font-medium uppercase tracking-wider text-swiss-gray-600">
         {rec.endereco}
       </p>
-      <p className="mt-4 flex-1 text-sm leading-relaxed text-swiss-gray-600">
+      <p className="mt-4 flex-1 break-words text-[clamp(0.8125rem,2.5vw,0.875rem)] leading-relaxed text-swiss-gray-600">
         {rec.descricao}
       </p>
-      <p className="mt-4 border-l-2 border-swiss-red pl-3 text-xs text-swiss-gray-600">
+      <p className="mt-4 break-words border-l-2 border-swiss-red pl-3 text-xs text-swiss-gray-600">
         <span className="font-bold uppercase tracking-wider text-swiss-black">Dica — </span>
         {rec.dica}
       </p>
