@@ -1,0 +1,19 @@
+{
+  "slug": "espaco-oasis",
+  "nome": "Espaço Oásis",
+  "categorias": ["esporte", "lazer"],
+  "tags": ["entorno", "noite"],
+  "endereco": "Rua Dr. Mário Vicente, 49, Vila Dom Pedro I, São Paulo - SP",
+  "cep": "04270-000",
+  "bairro": "Vila Dom Pedro I",
+  "entorno": true,
+  "horario": "Diariamente, 7h às 22h. Agendamento obrigatório para aulas e treinos.",
+  "preco": "$$",
+  "telefone": null,
+  "site": null,
+  "descricao": "O Espaço Oásis é muito mais que uma arena esportiva — é ponto de encontro para quem busca esporte, lazer e entretenimento no entorno do Ipiranga. Com quadras de areia de alto padrão, oferece aulas e treinos de beach tennis, futevôlei e vôlei de praia com professores fixos.\n\nDurante a semana recebe crianças e adultos; nos fins de semana vira palco de eventos, aniversários, shows e transmissões esportivas em telão de LED. O espaço conta ainda com restaurante, bar, rooftop e valet.\n\nSão Paulo se consolidou como polo dos esportes de areia mesmo longe do litoral — e o Oásis é um dos espaços que impulsionaram esse movimento na região do Ipiranga.",
+  "dica": "Agende aulas com antecedência — vagas limitadas nos horários de pico.",
+  "links": {
+    "maps": "https://maps.google.com/?q=Rua+Dr+Mario+Vicente+49+Ipiranga+Sao+Paulo"
+  }
+}

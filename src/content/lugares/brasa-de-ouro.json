@@ -1,0 +1,19 @@
+{
+  "slug": "brasa-de-ouro",
+  "nome": "Brasa de Ouro",
+  "categorias": ["comida"],
+  "tags": ["entorno", "familia", "historico"],
+  "endereco": "Av. do Cursino, 1575, Jardim da Saúde, São Paulo - SP",
+  "cep": "04133-100",
+  "bairro": "Jardim da Saúde",
+  "entorno": true,
+  "horario": "Segunda, almoço 11h–16h. Terça a domingo, 11h–0h. Consulte horários em feriados.",
+  "preco": "$$",
+  "telefone": "(11) 5073-5299",
+  "site": null,
+  "descricao": "Há mais de 40 anos na Av. do Cursino, a Brasa de Ouro é churrascaria e pizzaria com cara de restaurante de família. No almoço funciona em self-service por quilo, com opção de acrescentar churrasco ao prato — às quartas e sábados tem feijoada caprichada.\n\nO cardápio à la carte inclui misto do chef, picanha, bife à parmegiana generoso e bacalhau. O ambiente tem palco para shows, música ao vivo, brinquedos para crianças e estacionamento gratuito ao lado.\n\nFica no entorno do Ipiranga, no Jardim da Saúde — muitos moradores do bairro tratam a Brasa como restaurante oficial de confraternizações e almoços de domingo.",
+  "dica": "O misto do chef serve 3–4 pessoas — peça para dividir se forem dois.",
+  "links": {
+    "maps": "https://maps.google.com/?q=Av+do+Cursino+1575+Sao+Paulo"
+  }
+}

@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-ipiranga-green: #1a4d3e;
+  --color-ipiranga-green-light: #2d6b58;
+  --color-ipiranga-amber: #d4a853;
+  --color-ipiranga-amber-light: #e8c47a;
+  --color-ipiranga-cream: #faf7f2;
+  --color-ipiranga-warm: #f0ebe3;
+  --color-ipiranga-text: #2c2825;
+  --color-ipiranga-muted: #6b6560;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ipiranga-text);
+  background-color: var(--color-ipiranga-cream);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}

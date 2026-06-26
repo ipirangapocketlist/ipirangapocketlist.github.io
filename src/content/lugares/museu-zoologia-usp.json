@@ -1,0 +1,19 @@
+{
+  "slug": "museu-zoologia-usp",
+  "nome": "Museu de Zoologia da USP",
+  "categorias": ["cultura"],
+  "tags": ["gratuito", "familia", "historico"],
+  "endereco": "Av. Nazaré, 481, Ipiranga, São Paulo - SP",
+  "cep": "04263-000",
+  "bairro": "Ipiranga",
+  "entorno": false,
+  "horario": "Terça a domingo (inclusive feriados), 10h às 17h. Entrada até 16h30. Segunda fechado.",
+  "preco": "gratuito",
+  "telefone": "(11) 2065-8140",
+  "site": "https://mz.usp.br",
+  "descricao": "O Museu de Zoologia da USP abriga um dos mais importantes acervos zoológicos da América Latina, com mais de 10 milhões de exemplares entre vertebrados e invertebrados. A exposição permanente permite conhecer a diversidade da fauna brasileira e mundial em um ambiente científico acessível ao público.\n\nA entrada é gratuita e não exige agendamento para visitantes individuais, famílias ou grupos de até 15 pessoas. Grupos maiores precisam agendar exclusivamente pelo site oficial.\n\nAlém das visitas livres, o museu oferece modalidades orientadas e tours aos bastidores. É uma parada imperdível para famílias, estudantes e curiosos — especialmente combinada com um almoço ou jantar na Rua Bom Pastor.",
+  "dica": "Chegue cedo em feriados — a entrada encerra às 16h30.",
+  "links": {
+    "maps": "https://maps.google.com/?q=Av+Nazare+481+Ipiranga+Sao+Paulo"
+  }
+}

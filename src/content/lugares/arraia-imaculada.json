@@ -1,0 +1,19 @@
+{
+  "slug": "arraia-imaculada",
+  "nome": "Arraiá da Imaculada (Festa Junina)",
+  "categorias": ["cultura", "evento"],
+  "tags": ["evento-sazonal", "familia"],
+  "endereco": "Av. Nazaré, 993, Ipiranga, São Paulo - SP",
+  "cep": "04262-000",
+  "bairro": "Ipiranga",
+  "entorno": false,
+  "horario": "Evento sazonal — geralmente dois fins de semana em junho. Consulte imaculadaipiranga.org.",
+  "preco": "variavel",
+  "telefone": "(11) 99989-3290",
+  "site": "https://imaculadaipiranga.org",
+  "descricao": "O Arraiá da Paróquia Imaculada Conceição é uma das festas juninas mais tradicionais do Ipiranga. Realizado anualmente em junho, o evento atrai milhares de pessoas — fiéis, moradores e visitantes de outros bairros — para dois fins de semana de comidas típicas, música ao vivo e clima comunitário.\n\nAs barracas incluem pizza, comida nordestina, pernil, chopp, churrasco, cachorro-quente, caldos, doces, pesca, churros, algodão doce, quentão, vinho quente, bazar de artesanatos e bingo. Há brinquedos infláveis e apresentações musicais para a criançada.\n\nA Paróquia Imaculada Conceição fica na Av. Nazaré e possui amplo estacionamento gratuito (sem seguro). Entrada franca na maioria das edições — consulte datas e horários no site oficial antes de ir.",
+  "dica": "Acompanhe imaculadaipiranga.org em maio/junho para confirmar datas do Arraiá.",
+  "links": {
+    "maps": "https://maps.google.com/?q=Av+Nazare+993+Ipiranga+Sao+Paulo"
+  }
+}

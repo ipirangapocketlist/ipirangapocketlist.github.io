@@ -1,0 +1,19 @@
+{
+  "slug": "di-bari-pizza",
+  "nome": "Di Bari Pizza",
+  "categorias": ["comida"],
+  "tags": ["noite", "italiana"],
+  "endereco": "Rua Bom Pastor, 1496, Ipiranga, São Paulo - SP",
+  "cep": "04203-002",
+  "bairro": "Ipiranga",
+  "entorno": false,
+  "horario": "Terça a domingo, 18h às 23h. Segunda fechado.",
+  "preco": "$$",
+  "telefone": "(11) 3806-1256",
+  "site": "https://www.dibaripizza.com.br",
+  "descricao": "A Di Bari ocupa uma charmosa esquina da Rua Bom Pastor e é referência em pizza napolitana artesanal no Ipiranga. A massa passa por fermentação longa de 48 horas, resultando em borda macia e centro leve — estilo autêntico de Nápoles.\n\nO nome homenageia Bari, capital da Puglia no sul da Itália, terra dos antepassados de um dos sócios. A casa usa ingredientes de pequenos produtores locais e oferece tamanhos de 25cm (4 fatias) e 30cm (6 fatias), ideal para provar vários sabores.\n\nCom decoração moderna em dois andares, a Di Bari combina boa pizzada com amigos e ambiente acolhedor — uma parada natural depois de visitar o Museu de Zoologia da USP, a poucos minutos de caminhada.",
+  "dica": "Reserve com antecedência nos fins de semana — a casa costuma lotar.",
+  "links": {
+    "maps": "https://maps.google.com/?q=Rua+Bom+Pastor+1496+Ipiranga+Sao+Paulo"
+  }
+}

@@ -1,0 +1,52 @@
+---
+import Layout from '../components/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import NeighborhoodHistory from '../components/NeighborhoodHistory.astro';
+import PlaceGrid from '../components/PlaceGrid';
+import { getAllLugares } from '../lib/lugares';
+
+const lugares = getAllLugares();
+---
+
+<Layout
+  title="Ipiranga Pocket List — Guia do bairro"
+  description="Guia curado de lugares do Ipiranga e entorno: comida, cultura, lazer, esporte e muito mais."
+>
+  <Header />
+  <main>
+    <section class="relative overflow-hidden bg-ipiranga-green px-4 py-16 text-white sm:px-6 sm:py-24">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-ipiranga-amber"></div>
+        <div class="absolute -bottom-10 -left-10 h-48 w-48 rounded-full bg-ipiranga-amber"></div>
+      </div>
+      <div class="relative mx-auto max-w-4xl text-center">
+        <h1 class="font-display text-4xl font-bold sm:text-5xl lg:text-6xl">
+          Ipiranga Pocket List
+        </h1>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-white/90 sm:text-xl">
+          Lugares para comer, visitar e viver o bairro — curados para quem quer conhecer o Ipiranga de verdade.
+        </p>
+        <a
+          href="#lugares"
+          class="mt-8 inline-block rounded-full bg-ipiranga-amber px-8 py-3 font-semibold text-ipiranga-green transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ipiranga-green"
+        >
+          Explorar lugares
+        </a>
+      </div>
+    </section>
+
+    <NeighborhoodHistory />
+
+    <section id="lugares" class="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+      <h2 class="font-display mb-2 text-2xl font-semibold text-ipiranga-green sm:text-3xl">
+        Todos os lugares
+      </h2>
+      <p class="mb-8 text-ipiranga-muted">
+        {lugares.length} endereços no Ipiranga e entorno. Filtre por categoria.
+      </p>
+      <PlaceGrid client:load places={lugares} />
+    </section>
+  </main>
+  <Footer />
+</Layout>

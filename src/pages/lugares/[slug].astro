@@ -1,0 +1,164 @@
+---
+import Layout from '../../components/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getAllLugares, getAllSlugs } from '../../lib/lugares';
+import { CATEGORIA_LABELS, getCategoriaColor } from '../../data/categorias';
+
+export function getStaticPaths() {
+  return getAllSlugs().map((slug) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const lugares = getAllLugares();
+const lugar = lugares.find((l) => l.slug === slug);
+
+if (!lugar) {
+  return Astro.redirect('/');
+}
+
+const precoLabel: Record<string, string> = {
+  '$': 'Econômico',
+  '$$': 'Moderado',
+  '$$$': 'Premium',
+  gratuito: 'Gratuito',
+  variavel: 'Variável',
+};
+
+const descricaoParagrafos = lugar.descricao.split('\n\n');
+---
+
+<Layout
+  title={`${lugar.nome} — Ipiranga Pocket List`}
+  description={descricaoParagrafos[0]}
+>
+  <Header />
+  <main class="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
+    <nav aria-label="Breadcrumb" class="mb-6 text-sm text-ipiranga-muted">
+      <a href="/" class="hover:text-ipiranga-green">Início</a>
+      <span class="mx-2">/</span>
+      <span class="text-ipiranga-text">{lugar.nome}</span>
+    </nav>
+
+    <header class="mb-8">
+      <div class="mb-4 flex flex-wrap items-center gap-2">
+        {
+          lugar.categorias.map((cat) => (
+            <span
+              class={`rounded-full px-3 py-1 text-xs font-medium ${getCategoriaColor(cat)}`}
+            >
+              {CATEGORIA_LABELS[cat]}
+            </span>
+          ))
+        }
+        {
+          lugar.entorno && (
+            <span class="rounded-full bg-ipiranga-green/10 px-3 py-1 text-xs font-medium text-ipiranga-green">
+              Entorno
+            </span>
+          )
+        }
+      </div>
+      <h1 class="font-display text-3xl font-bold text-ipiranga-green sm:text-4xl">
+        {lugar.nome}
+      </h1>
+      <p class="mt-2 text-ipiranga-muted">{lugar.bairro} &mdash; {lugar.endereco}</p>
+    </header>
+
+    <article class="prose prose-lg max-w-none">
+      {
+        descricaoParagrafos.map((p) => (
+          <p class="mb-4 leading-relaxed text-ipiranga-text">{p}</p>
+        ))
+      }
+    </article>
+
+    {
+      lugar.tags.length > 0 && (
+        <div class="mt-6 flex flex-wrap gap-2">
+          {lugar.tags.map((tag) => (
+            <span class="rounded-md bg-ipiranga-warm px-2 py-1 text-xs text-ipiranga-muted">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      )
+    }
+
+    <aside
+      class="mt-10 rounded-2xl border border-ipiranga-warm bg-white p-6 shadow-sm"
+      aria-label="Informações práticas"
+    >
+      <h2 class="font-display mb-4 text-xl font-semibold text-ipiranga-green">
+        Informações práticas
+      </h2>
+      <dl class="space-y-3 text-sm">
+        <div>
+          <dt class="font-medium text-ipiranga-muted">Horário</dt>
+          <dd class="mt-0.5 text-ipiranga-text">{lugar.horario}</dd>
+        </div>
+        <div>
+          <dt class="font-medium text-ipiranga-muted">Preço</dt>
+          <dd class="mt-0.5 text-ipiranga-text">{precoLabel[lugar.preco] ?? lugar.preco}</dd>
+        </div>
+        <div>
+          <dt class="font-medium text-ipiranga-muted">Endereço</dt>
+          <dd class="mt-0.5 text-ipiranga-text">{lugar.endereco}</dd>
+        </div>
+        {
+          lugar.telefone && (
+            <div>
+              <dt class="font-medium text-ipiranga-muted">Telefone</dt>
+              <dd class="mt-0.5">
+                <a
+                  href={`tel:${lugar.telefone.replace(/\D/g, '')}`}
+                  class="text-ipiranga-green hover:underline"
+                >
+                  {lugar.telefone}
+                </a>
+              </dd>
+            </div>
+          )
+        }
+      </dl>
+
+      <div class="mt-4 rounded-lg bg-ipiranga-amber/10 p-4">
+        <p class="text-sm font-medium text-ipiranga-green">Dica</p>
+        <p class="mt-1 text-sm text-ipiranga-text">{lugar.dica}</p>
+      </div>
+
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href={lugar.links.maps}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center rounded-full bg-ipiranga-green px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-ipiranga-green-light focus:outline-none focus:ring-2 focus:ring-ipiranga-amber focus:ring-offset-2"
+        >
+          Como chegar
+        </a>
+        {
+          lugar.site && (
+            <a
+              href={lugar.site}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center rounded-full border border-ipiranga-green px-5 py-2.5 text-sm font-semibold text-ipiranga-green transition-colors hover:bg-ipiranga-green/5 focus:outline-none focus:ring-2 focus:ring-ipiranga-amber focus:ring-offset-2"
+            >
+              Site oficial
+            </a>
+          )
+        }
+      </div>
+    </aside>
+
+    <p class="mt-8">
+      <a
+        href="/#lugares"
+        class="text-sm font-medium text-ipiranga-green hover:underline focus:outline-none focus:ring-2 focus:ring-ipiranga-amber rounded"
+      >
+        &larr; Voltar para todos os lugares
+      </a>
+    </p>
+  </main>
+  <Footer />
+</Layout>

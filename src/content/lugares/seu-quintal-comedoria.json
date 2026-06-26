@@ -1,0 +1,19 @@
+{
+  "slug": "seu-quintal-comedoria",
+  "nome": "Seu Quintal Comedoria",
+  "categorias": ["comida"],
+  "tags": ["almoco", "pet-friendly"],
+  "endereco": "Rua Costa Aguiar, 1261, Ipiranga, São Paulo - SP",
+  "cep": "04204-001",
+  "bairro": "Ipiranga",
+  "entorno": false,
+  "horario": "Terça a sexta, 11h30 às 16h. Sábado e domingo, 12h às 16h. Segunda fechado.",
+  "preco": "$$",
+  "telefone": null,
+  "site": null,
+  "descricao": "Para chegar ao Seu Quintal, é preciso atravessar um corredor lateral — e a surpresa vale a pena. O restaurante ocupa o quintal de um imóvel antigo, com mesas ao ar livre cercadas por plantas e um galpão charmoso que abriga a cozinha.\n\nO cardápio é sucinto mas eclético: pratos como arroz de quintal com costelinha desfiada, coxa e sobrecoxa empanadas, moqueca e opções vegetarianas. Há também o Quintal To Go, na mesma rua, com cafés especiais e fatias de torta para levar.\n\nPet friendly e acolhedor, o Seu Quintal é o tipo de lugar que parece segredo de morador — mas que merece estar no roteiro de quem visita o Ipiranga.",
+  "dica": "Reserve nos fins de semana — o quintal enche rápido no almoço.",
+  "links": {
+    "maps": "https://maps.google.com/?q=Rua+Costa+Aguiar+1261+Ipiranga+Sao+Paulo"
+  }
+}

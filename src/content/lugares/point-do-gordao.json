@@ -1,0 +1,19 @@
+{
+  "slug": "point-do-gordao",
+  "nome": "Point do Gordão",
+  "categorias": ["comida"],
+  "tags": ["familia", "almoco", "noite"],
+  "endereco": "Rua Cipriano Barata, 1842, Ipiranga, São Paulo - SP",
+  "cep": "04205-001",
+  "bairro": "Ipiranga",
+  "entorno": false,
+  "horario": "Segunda a sexta: almoço 11h30–15h, jantar 18h–22h45. Sábado 11h30–23h45. Domingo 11h30–22h.",
+  "preco": "$$",
+  "telefone": "(11) 97605-5721",
+  "site": null,
+  "descricao": "O Point do Gordão viralizou nas redes com a famosa \"Ilha de Parmegiana\" — um filé mignon gigante coberto de molho, queijo e parmesão, cercado por batata frita, arroz e salada. O prato pode chegar a pesar até 6 kg e serve de 2 a 6 pessoas, dependendo do tamanho.\n\nMas a casa é muito mais que parmegiana: rodízio de carnes suculentas, buffet variado e preços populares que fizeram a rede crescer para dezenas de unidades em São Paulo. A proposta é clara — experiência completa sem pesar no bolso.\n\nAmbiente familiar, atendimento ágil e custo-benefício que conquistou moradores do Ipiranga e visitantes. Crianças até 5 anos não pagam; bariátricos têm 30% de desconto.",
+  "dica": "No almoço de segunda a sexta o rodízio sai mais em conta — confira valores no local.",
+  "links": {
+    "maps": "https://maps.google.com/?q=Rua+Cipriano+Barata+1842+Ipiranga+Sao+Paulo"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "hamburguer-seu-oswaldo",
+  "nome": "Hambúrguer do Seu Oswaldo",
+  "categorias": ["comida"],
+  "tags": ["historico", "almoco", "noite"],
+  "endereco": "Rua Bom Pastor, 1659, Ipiranga, São Paulo - SP",
+  "cep": "04203-052",
+  "bairro": "Ipiranga",
+  "entorno": false,
+  "horario": "Segunda a sábado, 12h às 22h. Domingo fechado.",
+  "preco": "$$",
+  "telefone": "(11) 93050-2976",
+  "site": null,
+  "descricao": "Fundada em 1966, a lanchonete do Seu Oswaldo é uma cápsula do tempo no Ipiranga. Oswaldo Paolicchi percebeu que não havia hamburgueria no bairro e abriu a Good Dog — os clientes preferiram chamar pelo nome do dono, e o nome pegou.\n\nO ambiente mantém o clima retrô: salão simples, bisnagas de ketchup e mostarda na mesa, e nada de batata frita ou milk-shake. O que brilha é o hambúrguer honesto — carne fininha de patinho fresco (90g), queijo derretido, bacon crocante, maionese caseira e molho de tomate no pão macio.\n\nDepois de quase sessenta anos, a casa continua fiel à proposta: lanches sem penduricalhos, sabor consistente e fila de clientes que voltam há décadas.",
+  "dica": "Leve Pix ou cartão de débito — a casa não aceita crédito.",
+  "links": {
+    "maps": "https://maps.google.com/?q=Rua+Bom+Pastor+1659+Ipiranga+Sao+Paulo"
+  }
+}
