@@ -8,7 +8,7 @@ interface PlaceCardProps {
 
 export default function PlaceCard({ place, index }: PlaceCardProps) {
   return (
-    <article className="card-swiss group flex h-full flex-col p-6">
+    <article className="card-swiss group flex h-full flex-col p-4 sm:p-6">
       <div className="mb-4 flex items-start justify-between gap-3">
         <span className="swiss-label border border-swiss-black px-2 py-1">
           {CATEGORIA_LABELS[place.categoria]}
@@ -26,7 +26,7 @@ export default function PlaceCard({ place, index }: PlaceCardProps) {
         </span>
       )}
 
-      <h3 className="text-xl font-bold leading-tight tracking-tight">
+      <h3 className="text-lg font-bold leading-tight tracking-tight sm:text-xl">
         <a href={`/lugares/${place.slug}`} className="hover:text-swiss-red focus:outline-none focus:ring-2 focus:ring-swiss-red focus:ring-offset-2">
           {place.nome}
         </a>
@@ -39,7 +39,7 @@ export default function PlaceCard({ place, index }: PlaceCardProps) {
         {place.descricao.split('\n\n')[0]}
       </p>
 
-      <div className="mt-6 flex flex-wrap items-center justify-between gap-2 border-t border-swiss-gray-200 pt-4">
+      <div className="mt-6 flex flex-col gap-2 border-t border-swiss-gray-200 pt-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
         <a
           href={`/lugares/${place.slug}`}
           className="text-xs font-semibold uppercase tracking-widest hover:text-swiss-red focus:outline-none focus:ring-2 focus:ring-swiss-red focus:ring-offset-2"
@@ -51,7 +51,7 @@ export default function PlaceCard({ place, index }: PlaceCardProps) {
             href={place.links.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-swiss px-4 py-2 text-[10px]"
+            className="btn-swiss w-full px-4 py-2 text-[10px] sm:w-auto"
           >
             Instagram
           </a>

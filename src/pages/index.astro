@@ -17,25 +17,25 @@ const lugares = getAllLugares();
   <Header client:load />
   <main>
     <!-- Hero Swiss -->
-    <section class="swiss-grid-bg relative border-b border-swiss-black px-4 py-16 sm:px-8 sm:py-24 lg:py-32">
-      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12 lg:items-end">
+    <section class="swiss-grid-bg relative border-b border-swiss-black px-4 py-12 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:py-32">
+      <div class="mx-auto grid max-w-7xl gap-8 sm:gap-12 lg:grid-cols-12 lg:items-end">
         <div class="lg:col-span-8">
           <span class="swiss-label">01 — Guia do bairro</span>
-          <h1 class="mt-6 text-5xl font-bold leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl">
+          <h1 class="mt-4 text-[clamp(2.25rem,10vw,5rem)] font-bold leading-[0.95] tracking-tight sm:mt-6 sm:text-7xl lg:text-8xl">
             IPIRANGA<br />
             <span class="text-swiss-red">POCKET</span><br />
             LIST
           </h1>
         </div>
         <div class="lg:col-span-4 lg:border-l lg:border-swiss-black lg:pl-8">
-          <p class="text-base leading-relaxed text-swiss-gray-600 sm:text-lg">
+          <p class="text-sm leading-relaxed text-swiss-gray-600 sm:text-base md:text-lg">
             Lugares para comer, visitar e viver o bairro — curados para quem quer conhecer o Ipiranga de verdade.
           </p>
-          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div class="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
             <a href="#lugares" class="btn-swiss">Explorar lugares</a>
             <a href="#vizinhos" class="btn-swiss-outline">Ver vizinhos</a>
           </div>
-          <p class="mt-8 font-mono text-xs text-swiss-gray-400">
+          <p class="mt-6 font-mono text-xs text-swiss-gray-400 sm:mt-8">
             {lugares.length} endereços · Zona Sul · São Paulo
           </p>
         </div>
@@ -44,7 +44,7 @@ const lugares = getAllLugares();
 
     <NeighborhoodHistory />
 
-    <section id="lugares" class="px-4 py-16 sm:px-8 sm:py-24">
+    <section id="lugares" class="px-4 py-12 sm:px-6 sm:py-20 md:px-8 md:py-24">
       <div class="mx-auto max-w-7xl">
         <div class="grid gap-6 border-b border-swiss-black pb-8 lg:grid-cols-12">
           <div class="lg:col-span-4">

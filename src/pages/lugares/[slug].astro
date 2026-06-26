@@ -32,14 +32,14 @@ const descricaoParagrafos = lugar.descricao.split('\n\n');
   description={descricaoParagrafos[0]}
 >
   <Header client:load />
-  <main class="mx-auto max-w-3xl px-4 py-10 sm:px-8 sm:py-16">
-    <nav aria-label="Breadcrumb" class="mb-10 border-b border-swiss-gray-200 pb-4 text-xs uppercase tracking-widest text-swiss-gray-600">
+  <main class="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12 md:px-8 md:py-16">
+    <nav aria-label="Breadcrumb" class="mb-8 border-b border-swiss-gray-200 pb-4 text-xs uppercase tracking-widest text-swiss-gray-600 sm:mb-10">
       <a href="/" class="hover:text-swiss-red">Início</a>
       <span class="mx-2">/</span>
-      <span class="text-swiss-black">{lugar.nome}</span>
+      <span class="break-words text-swiss-black">{lugar.nome}</span>
     </nav>
 
-    <header class="mb-10">
+    <header class="mb-8 sm:mb-10">
       <div class="mb-4 flex flex-wrap items-center gap-2">
         <span class={`swiss-label border px-2 py-1 ${getCategoriaColor(lugar.categoria)}`}>
           {CATEGORIA_LABELS[lugar.categoria]}
@@ -52,7 +52,7 @@ const descricaoParagrafos = lugar.descricao.split('\n\n');
           )
         }
       </div>
-      <h1 class="text-3xl font-bold leading-tight tracking-tight sm:text-5xl">
+      <h1 class="text-2xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl">
         {lugar.nome}
       </h1>
       <p class="mt-3 text-xs font-medium uppercase tracking-wider text-swiss-gray-600">
@@ -60,7 +60,7 @@ const descricaoParagrafos = lugar.descricao.split('\n\n');
       </p>
     </header>
 
-    <article class="space-y-5 border-l-2 border-swiss-black pl-6">
+    <article class="space-y-4 border-l-2 border-swiss-black pl-4 sm:space-y-5 sm:pl-6">
       {
         descricaoParagrafos.map((p, i) => (
           <p class={i === 0 ? 'text-lg font-medium leading-relaxed' : 'text-sm leading-relaxed text-swiss-gray-600'}>
@@ -82,7 +82,7 @@ const descricaoParagrafos = lugar.descricao.split('\n\n');
       )
     }
 
-    <aside class="card-swiss mt-12 p-6 sm:p-8" aria-label="Informações práticas">
+    <aside class="card-swiss mt-10 p-5 sm:mt-12 sm:p-8" aria-label="Informações práticas">
       <h2 class="text-xs font-bold uppercase tracking-[0.2em]">Informações</h2>
       <div class="swiss-rule-red mt-4"></div>
 
@@ -122,7 +122,7 @@ const descricaoParagrafos = lugar.descricao.split('\n\n');
         <p class="mt-1 text-sm text-swiss-gray-600">{lugar.dica}</p>
       </div>
 
-      <div class="mt-8 flex flex-wrap gap-3">
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
         <a href={lugar.links.maps} target="_blank" rel="noopener noreferrer" class="btn-swiss">
           Como chegar
         </a>

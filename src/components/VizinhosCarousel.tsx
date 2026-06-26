@@ -9,7 +9,7 @@ interface VizinhoCardProps {
 
 function VizinhoCard({ rec, index }: VizinhoCardProps) {
   return (
-    <article className="card-swiss flex h-full flex-col p-6">
+    <article className="card-swiss flex h-full flex-col p-4 sm:p-6">
       <div className="mb-4 flex items-start justify-between">
         <span className="swiss-label border border-swiss-black px-2 py-1">
           {CATEGORIA_LABELS[rec.categoria]}
@@ -32,12 +32,12 @@ function VizinhoCard({ rec, index }: VizinhoCardProps) {
         <span className="font-bold uppercase tracking-wider text-swiss-black">Dica — </span>
         {rec.dica}
       </p>
-      <div className="mt-6 flex flex-wrap gap-2 border-t border-swiss-gray-200 pt-4">
-        <a href={rec.instagram} target="_blank" rel="noopener noreferrer" className="btn-swiss text-[10px] py-2 px-4">
+      <div className="mt-6 flex flex-col gap-2 border-t border-swiss-gray-200 pt-4 sm:flex-row sm:flex-wrap">
+        <a href={rec.instagram} target="_blank" rel="noopener noreferrer" className="btn-swiss w-full py-2 px-4 text-[10px] sm:w-auto">
           Instagram
         </a>
         {rec.maps && (
-          <a href={rec.maps} target="_blank" rel="noopener noreferrer" className="btn-swiss-outline text-[10px] py-2 px-4">
+          <a href={rec.maps} target="_blank" rel="noopener noreferrer" className="btn-swiss-outline w-full py-2 px-4 text-[10px] sm:w-auto">
             Mapa
           </a>
         )}
