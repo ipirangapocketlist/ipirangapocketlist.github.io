@@ -1,0 +1,20 @@
+{
+  "slug": "nawaki-sushi",
+  "nome": "Nawaki Sushi",
+  "categoria": "comida",
+  "tags": ["japonesa", "rodizio", "almoco", "noite"],
+  "endereco": "Avenida Nazaré, 1651, Ipiranga, São Paulo - SP",
+  "cep": "04262-200",
+  "bairro": "Ipiranga",
+  "entorno": false,
+  "horario": "Segunda a quinta, 12h às 15h e 18h40 às 23h. Sexta, 12h às 15h e 18h40 às 23h30. Sábado, 12h às 23h30. Domingo, 12h às 23h.",
+  "preco": "$$",
+  "telefone": "(11) 2659-8242",
+  "site": null,
+  "descricao": "Na Avenida Nazaré, o Nawaki Sushi é referência em comida japonesa no Ipiranga — rodízio com pratos frios e quentes, sushis, temakis e opções quentes que vão do clássico ao mais ousado.\n\nA casa é conhecida pela variedade do rodízio e por receber bem grupos e famílias. O ambiente é amplo e funciona tanto no almoço quanto no jantar, com estacionamento no local.\n\nFica a poucos minutos do Museu do Ipiranga e do Parque da Independência — boa pedida depois de um passeio pelo bairro.",
+  "dica": "Confirme horários e valores do rodízio no Instagram antes de ir.",
+  "links": {
+    "maps": "https://maps.google.com/?q=Avenida+Nazare+1651+Ipiranga+Sao+Paulo",
+    "instagram": "https://www.instagram.com/nawaki.sushi/"
+  }
+}
