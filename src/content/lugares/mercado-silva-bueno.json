@@ -1,7 +1,7 @@
 {
   "slug": "mercado-silva-bueno",
   "nome": "Mercado Municipal Silva Bueno",
-  "categorias": ["comida", "compras"],
+  "categoria": "comida",
   "tags": ["historico", "familia"],
   "endereco": "Rua Silva Bueno, 2109, Ipiranga, São Paulo - SP",
   "cep": "04208-052",
@@ -14,6 +14,7 @@
   "descricao": "Oficialmente Mercado Municipal José Gomes de Moraes Neto, o Mercado do Ipiranga foi inaugurado em 1940 na Rua Bom Pastor e mudou-se para a Silva Bueno em 1949. Há mais de 85 anos é referência de comércio alimentício da região.\n\nCom 25 comerciantes, o mercado reúne açougues, peixarias, empórios, laticínios, floricultura e praça de alimentação com pastelaria, restaurantes (incluindo culinária árabe e asiática), sorveteria e cafeteria. Em 2021 ganhou área superior e banheiros modernizados.\n\nDomingo de manhã é tradição: famílias vão comprar, tomar café e almoçar na praça de alimentação. Um dos pontos mais vivos e históricos do bairro.",
   "dica": "Vá no domingo cedo — a praça de alimentação abre só até 13h.",
   "links": {
-    "maps": "https://maps.google.com/?q=Rua+Silva+Bueno+2109+Ipiranga+Sao+Paulo"
+    "maps": "https://maps.google.com/?q=Rua+Silva+Bueno+2109+Ipiranga+Sao+Paulo",
+    "instagram": "https://www.instagram.com/mercadomunicipaldoipiranga/"
   }
 }

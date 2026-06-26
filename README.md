@@ -24,8 +24,9 @@ npm run preview
 
 - [Astro](https://astro.build) — site estático
 - [Tailwind CSS](https://tailwindcss.com) — estilos
-- [React](https://react.dev) — filtros e grid interativos
-- [Framer Motion](https://www.framer.com/motion/) — animações
+- [React](https://react.dev) — carrosséis, filtros e header interativo
+- [Embla Carousel](https://www.embla-carousel.com/) — carrosséis
+- [Framer Motion](https://www.framer.com/motion/) — animações do header
 
 ## Conteúdo
 

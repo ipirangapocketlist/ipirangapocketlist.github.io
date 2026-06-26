@@ -1,0 +1,20 @@
+{
+  "slug": "assessoria-esportiva-ap",
+  "nome": "AP Assessoria Esportiva",
+  "categoria": "esporte",
+  "tags": ["corrida", "treino", "parque"],
+  "endereco": "Parque da Independência, Ipiranga, São Paulo - SP",
+  "cep": "04207-030",
+  "bairro": "Ipiranga",
+  "entorno": false,
+  "horario": "Consulte horários e agendamento pelo Instagram ou link na bio.",
+  "preco": "variavel",
+  "telefone": null,
+  "site": "https://linktr.ee/AdrianoPachecoAtleta",
+  "descricao": "A AP Assessoria Esportiva, liderada pelo professor Adriano Pacheco, oferece treinos de corrida e condicionamento físico no Parque da Independência — um dos cartões-postais do Ipiranga e ponto de encontro de atletas amadores da Zona Sul.\n\nAlém das aulas presenciais no parque, a assessoria disponibiliza planilhas de treino personalizadas para quem prefere correr com acompanhamento à distância. O perfil no Instagram reúne dicas, rotina de treinos e novidades da equipe.\n\nPara quem busca começar a correr, voltar aos treinos ou se preparar para provas, a AP é uma opção local com foco no bairro e entorno.",
+  "dica": "Agende sua aula pelo link na bio do Instagram @assessoriaesportivaap.",
+  "links": {
+    "maps": "https://maps.google.com/?q=Parque+da+Independencia+Ipiranga+Sao+Paulo",
+    "instagram": "https://www.instagram.com/assessoriaesportivaap/"
+  }
+}

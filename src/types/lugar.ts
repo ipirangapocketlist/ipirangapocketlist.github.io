@@ -12,7 +12,7 @@ export type Preco = '$' | '$$' | '$$$' | 'gratuito' | 'variavel';
 export interface Place {
   slug: string;
   nome: string;
-  categorias: Categoria[];
+  categoria: Categoria;
   tags: string[];
   endereco: string;
   cep: string;
@@ -26,5 +26,6 @@ export interface Place {
   dica: string;
   links: {
     maps: string;
+    instagram?: string | null;
   };
 }

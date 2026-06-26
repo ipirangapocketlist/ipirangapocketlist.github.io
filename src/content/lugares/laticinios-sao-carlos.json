@@ -1,7 +1,7 @@
 {
   "slug": "laticinios-sao-carlos",
   "nome": "Laticínios São Carlos",
-  "categorias": ["compras"],
+  "categoria": "compras",
   "tags": ["historico", "entorno"],
   "endereco": "Rua Visconde de Pirajá, 781, Ipiranga, São Paulo - SP",
   "cep": "04277-020",
@@ -14,6 +14,7 @@
   "descricao": "Fundado em 1973 por três amigos com experiência no comércio, o Laticínios São Carlos começou atendendo revendedores e ambulantes na Rua Visconde de Pirajá. Com o tempo, vizinhos passaram a comprar no balcão — e a loja cresceu, mantendo a estética dos antigos empórios.\n\nHoje atua no atacado e varejo, com enorme variedade de queijos, embutidos, vinhos, enlatados e importados. O prédio atual fica em frente à loja original, preservando a tradição de atendimento pessoal e preços competitivos.\n\nPara moradores do entorno e apreciadores de bons produtos, é parada obrigatória — especialmente para montar tábua de frios ou encher a despensa com qualidade.",
   "dica": "No atacado, compras acima de R$150 têm frete grátis na Grande São Paulo.",
   "links": {
-    "maps": "https://maps.google.com/?q=Rua+Visconde+de+Piraja+781+Ipiranga+Sao+Paulo"
+    "maps": "https://maps.google.com/?q=Rua+Visconde+de+Piraja+781+Ipiranga+Sao+Paulo",
+    "instagram": "https://www.instagram.com/laticiniossaocarlos/"
   }
 }

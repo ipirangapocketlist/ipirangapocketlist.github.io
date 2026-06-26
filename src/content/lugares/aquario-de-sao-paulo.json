@@ -1,7 +1,7 @@
 {
   "slug": "aquario-de-sao-paulo",
   "nome": "Aquário de São Paulo",
-  "categorias": ["cultura", "lazer"],
+  "categoria": "lazer",
   "tags": ["familia", "pago"],
   "endereco": "Rua Huet Bacelar, 407, Ipiranga, São Paulo - SP",
   "cep": "04275-080",
@@ -14,6 +14,7 @@
   "descricao": "Inaugurado em 2006, o Aquário de São Paulo foi o primeiro aquário temático da América Latina. Com cerca de 15 mil m² e mais de 2 mil animais de aproximadamente 300 espécies, a estrutura reproduz ecossistemas naturais para os visitantes conhecerem a vida marinha e de água doce.\n\nEntre as atrações estão o setor do urso-polar, aquário jurássico, show de sereias (atracões pagas à parte) e diversos biomas. É uma das principais opções de passeio em família no Ipiranga — especialmente para crianças.\n\nO aquário fica a cerca de 15 minutos a pé da estação Santos-Imigrantes (Linha 2-Verde). Ingressos devem ser comprados antecipadamente pelo site oficial; valores variam conforme promoções e categorias (adulto, infantil, melhor idade, professor, PCD).",
   "dica": "Compre ingressos online com antecedência — segunda-feira costuma ter promoções.",
   "links": {
-    "maps": "https://maps.google.com/?q=Rua+Huet+Bacelar+407+Ipiranga+Sao+Paulo"
+    "maps": "https://maps.google.com/?q=Rua+Huet+Bacelar+407+Ipiranga+Sao+Paulo",
+    "instagram": "https://www.instagram.com/aquariosp/"
   }
 }

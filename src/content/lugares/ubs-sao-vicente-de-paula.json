@@ -1,7 +1,7 @@
 {
   "slug": "ubs-sao-vicente-de-paula",
   "nome": "AMA/UBS Integrada São Vicente de Paula",
-  "categorias": ["saude"],
+  "categoria": "saude",
   "tags": ["servico", "entorno"],
   "endereco": "Rua Vicente da Costa, 289, Ipiranga, São Paulo - SP",
   "cep": "04266-050",
@@ -14,6 +14,7 @@
   "descricao": "A AMA/UBS Integrada São Vicente de Paula é unidade de saúde pública do SUS no Ipiranga. O modelo integrado combina Unidade Básica de Saúde (UBS) e Assistência Médica Ambulatorial (AMA) em um só endereço, ampliando o acesso a consultas, vacinas, exames e acompanhamento de condições crônicas.\n\nO atendimento é gratuito para quem usa o SUS — moradores do bairro e região podem procurar a unidade para consultas de clínico geral, pré-natal, saúde da criança, hipertensão, diabetes e demais serviços de atenção básica.\n\nIncluída neste guia como referência comunitária: é parte da infraestrutura do bairro, onde muitas famílias do Ipiranga e entorno são atendidas no dia a dia.",
   "dica": "Para agendamentos e informações específicas, ligue antes ou consulte o portal da Prefeitura.",
   "links": {
-    "maps": "https://maps.google.com/?q=Rua+Vicente+da+Costa+289+Ipiranga+Sao+Paulo"
+    "maps": "https://maps.google.com/?q=Rua+Vicente+da+Costa+289+Ipiranga+Sao+Paulo",
+    "instagram": "https://www.instagram.com/saudeprefsp/"
   }
 }

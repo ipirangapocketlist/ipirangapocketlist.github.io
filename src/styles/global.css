@@ -1,17 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-ipiranga-green: #1a4d3e;
-  --color-ipiranga-green-light: #2d6b58;
-  --color-ipiranga-amber: #d4a853;
-  --color-ipiranga-amber-light: #e8c47a;
-  --color-ipiranga-cream: #faf7f2;
-  --color-ipiranga-warm: #f0ebe3;
-  --color-ipiranga-text: #2c2825;
-  --color-ipiranga-muted: #6b6560;
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body: "DM Sans", system-ui, sans-serif;
+  --color-swiss-white: #ffffff;
+  --color-swiss-black: #0a0a0a;
+  --color-swiss-red: #da020e;
+  --color-swiss-gray-100: #f5f5f5;
+  --color-swiss-gray-200: #e5e5e5;
+  --color-swiss-gray-400: #a3a3a3;
+  --color-swiss-gray-600: #525252;
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 html {
@@ -33,11 +31,164 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
-  color: var(--color-ipiranga-text);
-  background-color: var(--color-ipiranga-cream);
+  font-family: var(--font-sans);
+  color: var(--color-swiss-black);
+  background-color: var(--color-swiss-white);
+  -webkit-font-smoothing: antialiased;
 }
 
-.font-display {
-  font-family: var(--font-display);
+/* Swiss grid overlay utility (optional decorative) */
+.swiss-grid-bg {
+  background-image:
+    linear-gradient(to right, rgb(0 0 0 / 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(0 0 0 / 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.swiss-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-swiss-gray-600);
+}
+
+.swiss-rule {
+  height: 1px;
+  background: var(--color-swiss-black);
+}
+
+.swiss-rule-red {
+  height: 3px;
+  width: 3rem;
+  background: var(--color-swiss-red);
+}
+
+.btn-swiss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--color-swiss-black);
+  color: var(--color-swiss-white);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-swiss:hover {
+  background: var(--color-swiss-red);
+}
+
+.btn-swiss-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-swiss-black);
+  color: var(--color-swiss-black);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-swiss-outline:hover {
+  background: var(--color-swiss-black);
+  color: var(--color-swiss-white);
+}
+
+.card-swiss {
+  border: 1px solid var(--color-swiss-black);
+  background: var(--color-swiss-white);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-swiss:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0 var(--color-swiss-black);
+}
+
+.carousel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--color-swiss-black);
+  background: var(--color-swiss-white);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.carousel-btn:hover:not(:disabled) {
+  background: var(--color-swiss-black);
+  color: var(--color-swiss-white);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.embla__slide {
+  flex: 0 0 88%;
+  min-width: 0;
+  padding-left: 1rem;
+}
+
+@media (min-width: 640px) {
+  .embla__slide {
+    flex: 0 0 48%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .embla__slide {
+    flex: 0 0 31.5%;
+  }
+}
+
+.embla__slide:first-child {
+  padding-left: 0;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-link {
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-1px);
+}
+
+.nav-link-active {
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link:hover,
+  .nav-link-active {
+    transform: none;
+  }
 }

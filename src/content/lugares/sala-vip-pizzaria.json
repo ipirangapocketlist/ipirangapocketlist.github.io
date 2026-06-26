@@ -1,7 +1,7 @@
 {
   "slug": "sala-vip-pizzaria",
   "nome": "Sala VIP Pizzaria",
-  "categorias": ["comida"],
+  "categoria": "comida",
   "tags": ["familia", "noite"],
   "endereco": "Rua Cisplatina, 195, Ipiranga, São Paulo - SP",
   "cep": "04211-040",
@@ -14,6 +14,7 @@
   "descricao": "Com mais de 25 anos de tradição no Ipiranga, a Sala VIP é a pizzaria de família por excelência do bairro. O salão amplo e acolhedor recebe grupos grandes, e o cardápio vai de clássicos como marguerita a opções elaboradas como burrata e atum especial.\n\nO grande diferencial é a brinquedoteca: cama elástica, mercadinho, mesa de pintura e forninho de pizza para as crianças se divertirem enquanto os pais comem em paz. O acesso à brinquedoteca está incluso na experiência.\n\nA casa oferece salão, delivery e opção de buffet para festas. Ambiente descontraído, serviço ágil e clima festivo — escolha certeira para uma noite de pizza em família.",
   "dica": "Nos fins de semana a brinquedoteca tem monitoria — ideal para famílias com crianças pequenas.",
   "links": {
-    "maps": "https://maps.google.com/?q=Rua+Cisplatina+195+Ipiranga+Sao+Paulo"
+    "maps": "https://maps.google.com/?q=Rua+Cisplatina+195+Ipiranga+Sao+Paulo",
+    "instagram": "https://www.instagram.com/salavip_pizzabar/"
   }
 }

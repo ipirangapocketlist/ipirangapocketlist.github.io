@@ -1,8 +1,8 @@
 ---
 import Layout from '../../components/Layout.astro';
-import Header from '../../components/Header.astro';
+import Header from '../../components/Header';
 import Footer from '../../components/Footer.astro';
-import { getAllLugares, getAllSlugs } from '../../lib/lugares';
+import { getLugarBySlug, getAllSlugs } from '../../lib/lugares';
 import { CATEGORIA_LABELS, getCategoriaColor } from '../../data/categorias';
 
 export function getStaticPaths() {
@@ -10,8 +10,7 @@ export function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
-const lugares = getAllLugares();
-const lugar = lugares.find((l) => l.slug === slug);
+const lugar = slug ? getLugarBySlug(slug) : undefined;
 
 if (!lugar) {
   return Astro.redirect('/');
@@ -32,52 +31,50 @@ const descricaoParagrafos = lugar.descricao.split('\n\n');
   title={`${lugar.nome} — Ipiranga Pocket List`}
   description={descricaoParagrafos[0]}
 >
-  <Header />
-  <main class="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
-    <nav aria-label="Breadcrumb" class="mb-6 text-sm text-ipiranga-muted">
-      <a href="/" class="hover:text-ipiranga-green">Início</a>
+  <Header client:load />
+  <main class="mx-auto max-w-3xl px-4 py-10 sm:px-8 sm:py-16">
+    <nav aria-label="Breadcrumb" class="mb-10 border-b border-swiss-gray-200 pb-4 text-xs uppercase tracking-widest text-swiss-gray-600">
+      <a href="/" class="hover:text-swiss-red">Início</a>
       <span class="mx-2">/</span>
-      <span class="text-ipiranga-text">{lugar.nome}</span>
+      <span class="text-swiss-black">{lugar.nome}</span>
     </nav>
 
-    <header class="mb-8">
+    <header class="mb-10">
       <div class="mb-4 flex flex-wrap items-center gap-2">
-        {
-          lugar.categorias.map((cat) => (
-            <span
-              class={`rounded-full px-3 py-1 text-xs font-medium ${getCategoriaColor(cat)}`}
-            >
-              {CATEGORIA_LABELS[cat]}
-            </span>
-          ))
-        }
+        <span class={`swiss-label border px-2 py-1 ${getCategoriaColor(lugar.categoria)}`}>
+          {CATEGORIA_LABELS[lugar.categoria]}
+        </span>
         {
           lugar.entorno && (
-            <span class="rounded-full bg-ipiranga-green/10 px-3 py-1 text-xs font-medium text-ipiranga-green">
+            <span class="border-b-2 border-swiss-red pb-0.5 text-[10px] font-bold uppercase tracking-widest text-swiss-red">
               Entorno
             </span>
           )
         }
       </div>
-      <h1 class="font-display text-3xl font-bold text-ipiranga-green sm:text-4xl">
+      <h1 class="text-3xl font-bold leading-tight tracking-tight sm:text-5xl">
         {lugar.nome}
       </h1>
-      <p class="mt-2 text-ipiranga-muted">{lugar.bairro} &mdash; {lugar.endereco}</p>
+      <p class="mt-3 text-xs font-medium uppercase tracking-wider text-swiss-gray-600">
+        {lugar.bairro} — {lugar.endereco}
+      </p>
     </header>
 
-    <article class="prose prose-lg max-w-none">
+    <article class="space-y-5 border-l-2 border-swiss-black pl-6">
       {
-        descricaoParagrafos.map((p) => (
-          <p class="mb-4 leading-relaxed text-ipiranga-text">{p}</p>
+        descricaoParagrafos.map((p, i) => (
+          <p class={i === 0 ? 'text-lg font-medium leading-relaxed' : 'text-sm leading-relaxed text-swiss-gray-600'}>
+            {p}
+          </p>
         ))
       }
     </article>
 
     {
       lugar.tags.length > 0 && (
-        <div class="mt-6 flex flex-wrap gap-2">
+        <div class="mt-8 flex flex-wrap gap-2">
           {lugar.tags.map((tag) => (
-            <span class="rounded-md bg-ipiranga-warm px-2 py-1 text-xs text-ipiranga-muted">
+            <span class="border border-swiss-black px-2 py-1 text-[10px] font-semibold uppercase tracking-widest">
               #{tag}
             </span>
           ))}
@@ -85,35 +82,33 @@ const descricaoParagrafos = lugar.descricao.split('\n\n');
       )
     }
 
-    <aside
-      class="mt-10 rounded-2xl border border-ipiranga-warm bg-white p-6 shadow-sm"
-      aria-label="Informações práticas"
-    >
-      <h2 class="font-display mb-4 text-xl font-semibold text-ipiranga-green">
-        Informações práticas
-      </h2>
-      <dl class="space-y-3 text-sm">
+    <aside class="card-swiss mt-12 p-6 sm:p-8" aria-label="Informações práticas">
+      <h2 class="text-xs font-bold uppercase tracking-[0.2em]">Informações</h2>
+      <div class="swiss-rule-red mt-4"></div>
+
+      <dl class="mt-6 grid gap-4 sm:grid-cols-2">
         <div>
-          <dt class="font-medium text-ipiranga-muted">Horário</dt>
-          <dd class="mt-0.5 text-ipiranga-text">{lugar.horario}</dd>
+          <dt class="swiss-label">Categoria</dt>
+          <dd class="mt-1 font-medium">{CATEGORIA_LABELS[lugar.categoria]}</dd>
         </div>
         <div>
-          <dt class="font-medium text-ipiranga-muted">Preço</dt>
-          <dd class="mt-0.5 text-ipiranga-text">{precoLabel[lugar.preco] ?? lugar.preco}</dd>
+          <dt class="swiss-label">Preço</dt>
+          <dd class="mt-1 font-medium">{precoLabel[lugar.preco] ?? lugar.preco}</dd>
         </div>
-        <div>
-          <dt class="font-medium text-ipiranga-muted">Endereço</dt>
-          <dd class="mt-0.5 text-ipiranga-text">{lugar.endereco}</dd>
+        <div class="sm:col-span-2">
+          <dt class="swiss-label">Horário</dt>
+          <dd class="mt-1 text-sm">{lugar.horario}</dd>
+        </div>
+        <div class="sm:col-span-2">
+          <dt class="swiss-label">Endereço</dt>
+          <dd class="mt-1 text-sm">{lugar.endereco}</dd>
         </div>
         {
           lugar.telefone && (
-            <div>
-              <dt class="font-medium text-ipiranga-muted">Telefone</dt>
-              <dd class="mt-0.5">
-                <a
-                  href={`tel:${lugar.telefone.replace(/\D/g, '')}`}
-                  class="text-ipiranga-green hover:underline"
-                >
+            <div class="sm:col-span-2">
+              <dt class="swiss-label">Telefone</dt>
+              <dd class="mt-1">
+                <a href={`tel:${lugar.telefone.replace(/\D/g, '')}`} class="font-medium hover:text-swiss-red">
                   {lugar.telefone}
                 </a>
               </dd>
@@ -122,41 +117,35 @@ const descricaoParagrafos = lugar.descricao.split('\n\n');
         }
       </dl>
 
-      <div class="mt-4 rounded-lg bg-ipiranga-amber/10 p-4">
-        <p class="text-sm font-medium text-ipiranga-green">Dica</p>
-        <p class="mt-1 text-sm text-ipiranga-text">{lugar.dica}</p>
+      <div class="mt-6 border-l-2 border-swiss-red pl-4">
+        <p class="text-xs font-bold uppercase tracking-widest">Dica</p>
+        <p class="mt-1 text-sm text-swiss-gray-600">{lugar.dica}</p>
       </div>
 
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a
-          href={lugar.links.maps}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center rounded-full bg-ipiranga-green px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-ipiranga-green-light focus:outline-none focus:ring-2 focus:ring-ipiranga-amber focus:ring-offset-2"
-        >
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href={lugar.links.maps} target="_blank" rel="noopener noreferrer" class="btn-swiss">
           Como chegar
         </a>
         {
           lugar.site && (
-            <a
-              href={lugar.site}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center rounded-full border border-ipiranga-green px-5 py-2.5 text-sm font-semibold text-ipiranga-green transition-colors hover:bg-ipiranga-green/5 focus:outline-none focus:ring-2 focus:ring-ipiranga-amber focus:ring-offset-2"
-            >
-              Site oficial
+            <a href={lugar.site} target="_blank" rel="noopener noreferrer" class="btn-swiss-outline">
+              Site
+            </a>
+          )
+        }
+        {
+          lugar.links.instagram && (
+            <a href={lugar.links.instagram} target="_blank" rel="noopener noreferrer" class="btn-swiss-outline">
+              Instagram
             </a>
           )
         }
       </div>
     </aside>
 
-    <p class="mt-8">
-      <a
-        href="/#lugares"
-        class="text-sm font-medium text-ipiranga-green hover:underline focus:outline-none focus:ring-2 focus:ring-ipiranga-amber rounded"
-      >
-        &larr; Voltar para todos os lugares
+    <p class="mt-10">
+      <a href="/#lugares" class="text-xs font-semibold uppercase tracking-widest hover:text-swiss-red">
+        ← Voltar para lugares
       </a>
     </p>
   </main>

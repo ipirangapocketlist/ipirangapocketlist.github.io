@@ -1,7 +1,7 @@
 {
   "slug": "sesc-ipiranga",
   "nome": "SESC Ipiranga",
-  "categorias": ["cultura", "lazer"],
+  "categoria": "cultura",
   "tags": ["familia", "esporte"],
   "endereco": "Rua Bom Pastor, 822, Ipiranga, São Paulo - SP",
   "cep": "04203-000",
@@ -14,6 +14,7 @@
   "descricao": "Inaugurado em 1992, o SESC Ipiranga é um dos principais polos culturais e esportivos da Zona Sul. Situado ao lado do Parque da Independência, a unidade mescla arquitetura ampla com áreas verdes que recebem até a fauna local.\n\nO espaço oferece teatro (204 lugares), biblioteca, piscina, ginásio, cafeteria, loja, odontologia e o Espaço de Tecnologias e Artes (ETA). O Quintal ao ar livre recebe shows, oficinas, rodas de conversa e exposições.\n\nA programação abrange cursos, espetáculos, cinema, atividades para crianças, idosos e esportes. Ingressos são vendidos semanalmente online (terças, 17h) e presencialmente (quartas, 17h). Credencial SESC necessária para a maioria das atividades.",
   "dica": "Confira a programação mensal no site — há eventos gratuitos no Quintal.",
   "links": {
-    "maps": "https://maps.google.com/?q=Rua+Bom+Pastor+822+Ipiranga+Sao+Paulo"
+    "maps": "https://maps.google.com/?q=Rua+Bom+Pastor+822+Ipiranga+Sao+Paulo",
+    "instagram": "https://www.instagram.com/sescipiranga/"
   }
 }

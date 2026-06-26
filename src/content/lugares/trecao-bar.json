@@ -1,7 +1,7 @@
 {
   "slug": "trecao-bar",
   "nome": "Trecão Bar",
-  "categorias": ["comida", "lazer"],
+  "categoria": "comida",
   "tags": ["entorno", "noite"],
   "endereco": "Rua Nova Louzã, 66, Vila Firmiano Pinto, São Paulo - SP",
   "cep": "04125-090",
@@ -14,6 +14,7 @@
   "descricao": "O Trecão Bar é buteco tradicional no entorno do Ipiranga, participante do circuito Comida di Buteco. A casa serve petiscos criativos que misturam sabores do campo e do mar — destaque para o bolinho de abóbora cabotia com camarão, com pimenta caseira e pesto de coentro.\n\nO toast mineirinho com provolone tostado e molho pesto salsa também é pedida clássica. Ambiente descontraído, cerveja gelada e clima de bar de bairro — o tipo de lugar para esticar a conversa depois do jogo ou encontrar amigos no fim de semana.\n\nFica na Vila Firmiano Pinto, perto da estação Santos-Imigrantes, acessível para quem circula entre Ipiranga e Cursino.",
   "dica": "Peça o bolinho mix — combinação de abóbora e camarão é a especialidade da casa.",
   "links": {
-    "maps": "https://maps.google.com/?q=Rua+Nova+Louza+66+Sao+Paulo"
+    "maps": "https://maps.google.com/?q=Rua+Nova+Louza+66+Sao+Paulo",
+    "instagram": "https://www.instagram.com/trecao/"
   }
 }
