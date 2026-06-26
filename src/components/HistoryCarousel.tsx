@@ -6,9 +6,11 @@ interface HistoryCarouselProps {
   paragraphs: string[];
 }
 
+const AUTOPLAY_DELAY_MS = 14000;
+
 export default function HistoryCarousel({ paragraphs }: HistoryCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 6000, stopOnInteraction: true }),
+    Autoplay({ delay: AUTOPLAY_DELAY_MS, stopOnInteraction: true }),
   ]);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
